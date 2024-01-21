@@ -1,0 +1,312 @@
+## Object-fit: 
+
+** fill -> distorce a imagem para se encaixar nas 
+proporções definidas.
+
+** contain -> imagem mantem a proporção priginal mas e 
+dimensionada para caber na proporção definida
+
+** cover -> imagem preenche todo o container e corta a imagem
+que utrapassou o tamanho definido.
+
+** none -> imagem ignora a proporção definida 
+
+** scale-down -> imagem tera o valor de contain ou none, 
+dependendo de qual for menor.
+
+
+## Object-position: como uma imagem ou vidio deve se 
+posicionar. [orizontal] [vertical]
+
+
+## Background-color : rgb(0, 0, 0);
+## Background-image: url('./caminho/imagem.png');
+## Background-image:linear-gradiente(cor-comerçar, 
+cor-terminar); -> começa em uma cor
+e termina em outra.
+## Background-image: radial-gradient (cor-comerçar, 
+cor-terminar);
+## Background-image: repeating-liner-gradiente(to top, cor, 
+0 20px, cor 20px 40px) ->repete um efeito, [começa, cor, 
+tamanho que vai ocupar, cor, tamanho que vai ocupar]
+
+
+## Background-size: redimensionar as imagens de fundo
+
+** auto -> a imagem se ajusta automaticamente ao elemento
+
+** cover -> a imagem vai ocupar todo o fundo do elemento
+cortando ou aumentando ela se necessário  
+
+** contain -> redimensiona a imagem para ela aparecer 
+totalmente mesmo que ela não se encaixe no container
+
+** valor1 -> [largura]
+
+** valor1 valor2 -> [largura] [altura]  
+
+** camada1 camada2 -> contain, cover [valor para cada 
+imagem na ordem que elas foram definidas]
+
+
+##background-repeat: defini a repetição da imagem de fundo
+
+** repeat -> a imagem se repete lado a lado em todas as 
+direções
+
+** repeat-x -> a imagem vai se repetir somente no eixo x 
+orizontal
+
+** repeat-y -> a imagem vai se repetir somente no eixo y 
+verticalmente
+
+** space -> a imagem se repete nas duas direções sem cortas a 
+imagem, adiciona um espaço em branco para que a imagem não 
+seja cortada
+
+** round -> se repete em todas as direções sem cortar mas a 
+imagem a remencionada para não ser cortada
+
+** no-repeat -> a imagem não deve ser repetida
+
+** [vertical] [orizontal] -> como cada eixo deve se comportar
+
+
+##Background-position: posição da imagem
+
+** bottom, left, right, center
+** [valor orizontal] [valor vertical] 
+** [valor orizontal] 10px (valor que fica afastado do 1º valor) 
+[valor vertical] (valor que fica afastado do 2º valor)
+
+
+## Background-attachment: como o fundo do elemento vai se 
+movimentar em relação a janela do navegador.
+
+** fixed -> imagem de fundo fica fixa mesmo rolando a pagina
+
+** scroll -> se move junto quando rola a pagina mas fica
+fixa no conteudo interno
+
+** local -> imagem rola junto com o fundo do elemento interno
+e fica fixa quando rola a pagina
+
+
+## Backgound-origin: ponto de origem de uma imagem de fundo
+
+** padding-box -> ponto de origem não cobre a area onde a 
+borda se encontra mas cobre o padding
+
+** border-box -> cobre a borda e o padding
+
+** content-box -> não cobre a borda e o padding
+
+
+## Background-clip: controlar se a imagem ou cor de fundo
+preenche as areas definidas, pode ser usado com cores
+
+** padding-box -> não cobre a borda mas cobre o padding
+
+** border-box -> preenche tudo
+
+** content-box -> não cobre a borda ou padding
+
+** text -> a imagem ou padrão vai ocupar o espaço do texto
+a propriedade do texto de ser: 
+-webkit-background-clip: text;
+color: transparent;
+
+
+##Background-blend-mode: efeitos de mesclagem, com a imagem
+e a cor de fundo 
+
+
+##Background: propriedade resumida
+
+** url('') [position] [size] [repeat] [attachement] [origin]
+[clip] [cor de fundo]
+
+
+
+#Border: definir borda de um elemento
+
+** [espesura] [estilo] [cor]
+
+** border-radius: valor-px -> arredodar os cantos
+
+
+## Borde-image: 
+
+** border-image-source: url('') -> coloa uma imagem na borda
+
+** border-image-slice: valor (fill coloca a imagem do centro) 
+ como uma imagem de fundo-> divide a imagem em regiões	
+
+** border-image-repeat: repeat/no-repeat/strertch/round/space
+-> controla se a imagem repete
+
+** border-image-width: valor-px -> largura da imagem 
+
+** borde-image-outset: valor -> define a distancia da imagem 
+e do elemento
+
+
+
+# Fontes
+
+## font-family: fonte;
+
+## @font-face{
+	font-family: nome;
+	src: url('');
+}
+
+## font-variant: define se o texto deve ser exibido em formato
+varsalet. caixa auta menor
+
+## font-stretch: expande ou diminui o texto
+
+## line-height: 1.1 (multiplicado pelo tamanho da fonte)-> 
+espaço abaixo e a cima do texto
+
+## font: resumida
+
+
+
+# Texto
+
+## text-transform: definir quais são os caracteres maiusculos
+e minusculo;
+
+** capitaliza -> primeira letra de cada palavra maiuscula
+
+** uppercase -> tudo maiusculo
+
+** lowercase -> tudo minusculo 
+
+
+## text-align -> alinhar o texto 
+
+** left (esquerda) | right (direita) | center (centro) | 
+justify (justificado)
+
+
+## text-decoration: adiciona ou remove linhas no texto
+
+** underline -> linha a baixo
+
+** line-throught -> linha no meio
+
+** overline -> linha em cima
+
+
+## text-ident -> defini o recuo da primeira linha
+
+
+## letter-spacing -> adiciona espaçamento ente cada caracter 
+do texto
+
+## word-spacing -> adiciona espaçamento entre cada palavra
+
+
+## white-space -> define como os espaços em branco vão se
+comportar
+
+** nowrap -> quebras de linha são ignoradas
+
+** pre -> o espaço em branco e preservado do jeito definido
+mas ultrapassa o limite de espaço definido 
+
+** pre-line -> espaços em branco são transformados em 1 unico
+espalo mas respeita as quebras de linha definidas e o espaço
+
+** pre-warp -> espaços em branco são preservado e o texto e 
+quebrado quando necessario
+
+** breal-space -> espaços em branco são preservado e o texto e 
+quebrado quando necessario, mas quebra sequencias de espaços
+que ultrapassam o limite deifinido
+
+
+## word-wrap -> se uma palavra deve ficar na mesma linha ou 
+deve ser quebrada para se adequar ao limite
+
+** break-worl -> ira quebra a palavra em qualquer caractere
+para não ultrapassar o limite definido
+
+
+## word-break -> defini quando o texto deve quebra a linha
+
+** break-all -> palavra sera quebrada em qualquer caracter 
+para que não ultrapasse os limites definidos. Não faz quebra
+de linha
+
+** keep-all -> não pode ser quebrado em linguagens especificas
+
+
+## writing-mode -> mudar a orientação do texto, dependendo do
+idioma utlizado
+
+** vertical-rl -> da direita para a esquerda, de cima para 
+baixo
+
+** vertical-lr -> da esquerda para a direita, de cima para 
+baixo
+
+
+## text-overflow -> defini a orientação do texto, defini 
+como mostrar para o usuario que tem mais texto para ser lido
+
+** clip -> texto é cortado
+
+** ellipsis -> adiciona ... no final do texto
+
+** string -> no firefox pode usar uma string que sera 
+exibida
+ 
+
+
+# Sombras
+
+## box-shadow [inset](sombra interna) [valor horizontal] 
+[valor vertical] [valor de desfoque] [tamanho da sobra] [cor]
+, pode passar duas sombras separadas por virgula
+
+## filter: drop-shadow(valores) -> sombra interna na imagem 
+
+## text-shadow: [horizontal] [vertical] [desfoque] [cor] 
+-> efeito de sombra no texto
+
+
+# Opacidade
+
+## opacity: 0.5[nivel de transparencial]
+
+
+
+## Overflow -> controla como o coteudo deve ser exibido
+quando ultrapassa os limites definidos
+
+** hidden -> conteudo é cortado e não é mais visivel
+
+** scroll -> cria um scroll dentro do espaço definido
+
+** auto -> scroll masi a barra de rolagem so é adicionada
+quando o tamanho ultrapassa o limite definindo
+
+**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
